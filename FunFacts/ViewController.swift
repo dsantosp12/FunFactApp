@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     
     // IBOutlet means interface builder outler
     @IBOutlet weak var funFactLabel: UILabel!
-    let factProvider = FactProvider()
+    @IBOutlet weak var showFactButton: UIButton!
+    
+    let factProvider: FactProvider = FactProvider()
+    var colorProvider: BackgroundColorProvider = BackgroundColorProvider()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,10 @@ class ViewController: UIViewController {
 
     @IBAction func showFact() {
         self.funFactLabel.text = self.factProvider.randomFact()
+        let randomColor: UIColor = self.colorProvider.randomColor()
+        
+        self.view.backgroundColor = randomColor
+        self.showFactButton.tintColor = randomColor
     }
 
 }
