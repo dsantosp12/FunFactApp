@@ -12,11 +12,12 @@ class ViewController: UIViewController {
     
     // IBOutlet means interface builder outler
     @IBOutlet weak var funFactLabel: UILabel!
+    let factProvider = FactProvider()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.funFactLabel.text = "An interesting fact!"
+        self.funFactLabel.text = factProvider.randomFact()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showFact() {
-        self.funFactLabel.text = "You pressed me!"
+        self.funFactLabel.text = self.factProvider.randomFact()
     }
 
 }
