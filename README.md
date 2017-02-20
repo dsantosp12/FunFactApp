@@ -7,4 +7,7 @@ I learned about IBOutlet and the design pattern for building iOS application (MV
 This application consist of a button and label that randomly displays a string from
 an array every time the button is pressed and change the color of the background.
 
- 
+## Screenshoots
+
+![alt](https://github.com/dsantosp12/FunFactsApp/blob/master/res/img/screenshot_1.PNG)
+![alt](https://github.com/dsantosp12/FunFactsApp/blob/master/res/img/screenshot_2.PNG)
